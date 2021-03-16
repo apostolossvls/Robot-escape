@@ -9,7 +9,7 @@ public class LookAtPlayer : MonoBehaviour
     public Transform faceController;
     public Transform target;
     public Transform[] defaultTargets;
-    float targetImportance;
+    public float targetImportance;
     public float rotationSpeed = 5f;
     public float defaultTime = 5;
     float defaultTimer;

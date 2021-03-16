@@ -190,10 +190,15 @@ namespace DitzelGames.FastIK
             //set position & rotation
             for (int i = 0; i < Positions.Length; i++)
             {
-                if (i == Positions.Length - 1)
+                if (i == Positions.Length - 1){
                     SetRotationRootSpace(Bones[i], Quaternion.Inverse(targetRotation) * StartRotationTarget * Quaternion.Inverse(StartRotationBone[i]));
+                    //SetRotationRootSpace2(Bones[i], Quaternion.Inverse(targetRotation) * StartRotationTarget * Quaternion.Inverse(StartRotationBone[i]));
+                }
                 else
+                {
                     SetRotationRootSpace(Bones[i], Quaternion.FromToRotation(StartDirectionSucc[i], Positions[i + 1] - Positions[i]) * Quaternion.Inverse(StartRotationBone[i]));
+                    //SetRotationRootSpace2(Bones[i], Quaternion.FromToRotation(StartDirectionSucc[i], Positions[i + 1] - Positions[i]) * Quaternion.Inverse(StartRotationBone[i]));
+                }
                 SetPositionRootSpace(Bones[i], Positions[i]);
             }
         }
@@ -225,10 +230,40 @@ namespace DitzelGames.FastIK
 
         private void SetRotationRootSpace(Transform current, Quaternion rotation)
         {
-            if (Root == null)
+            if (Root == null){
                 current.rotation = rotation;
-            else
+            }
+            else {
                 current.rotation = Root.rotation * rotation;
+            }
+        }
+        private void SetRotationRootSpace2(Transform current, Vector3 second)
+        {
+            if (Root == null){
+                Vector3 x = Vector3.Cross(current.position.normalized, second.normalized);
+                //Vector3 x = Vector3.Cross(current.position.normalized, Target.position.normalized);
+                float theta = Mathf.Asin(x.magnitude);
+                Debug.Log(theta);
+                Vector3 w = x.normalized * theta / Time.fixedDeltaTime;
+                Rigidbody rigidbody = current.GetComponent<Rigidbody>();
+                Quaternion q = current.transform.rotation * rigidbody.inertiaTensorRotation;
+                Vector3 T = q * Vector3.Scale(rigidbody.inertiaTensor, (Quaternion.Inverse(q) * w));
+                rigidbody.AddTorque(T, ForceMode.Impulse);
+                //current.rotation = rotation;
+            }
+            else {
+                Vector3 x = Vector3.Cross(current.position.normalized, second.normalized);
+                //Vector3 x = Vector3.Cross(current.position.normalized, Target.position.normalized);
+                float theta = Mathf.Asin(x.magnitude);
+                Debug.Log(theta);
+                Vector3 w = x.normalized * theta / Time.fixedDeltaTime;
+                Rigidbody rigidbody = current.GetComponent<Rigidbody>();
+                Quaternion q = current.transform.rotation * rigidbody.inertiaTensorRotation;
+                Vector3 T = q * Vector3.Scale(rigidbody.inertiaTensor, (Quaternion.Inverse(q) * w));
+                rigidbody.AddTorque(T, ForceMode.Impulse);
+
+                //current.rotation = Root.rotation * rotation;
+            }
         }
 
         void OnDrawGizmos()
