@@ -19,7 +19,7 @@ namespace DitzelGames.FastIK
         /// </summary>
         protected Quaternion StartRotation;
         //public bool rotationOnY;
-        public Rigidbody rigidbody;
+        //public Rigidbody rigidbody;
 
         void Awake()
         {
@@ -29,10 +29,10 @@ namespace DitzelGames.FastIK
             StartDirection = Target.position - transform.position;
             StartRotation = transform.rotation;
             
-            rigidbody = GetComponent<Rigidbody>();
+            //rigidbody = GetComponent<Rigidbody>();
         }
 
-        void FixedUpdate()
+        void Update()
         {
             if (Target == null)
                 return;
@@ -44,16 +44,16 @@ namespace DitzelGames.FastIK
             //    transform.rotation = q;
             //}
             //else{
-                Vector3 x = Vector3.Cross(transform.position.normalized, Target.position.normalized);
-                float theta = Mathf.Asin(x.magnitude);
-                Debug.Log(theta);
-                Vector3 w = x.normalized * theta / Time.fixedDeltaTime;
+                //Vector3 x = Vector3.Cross(transform.position.normalized, Target.position.normalized);
+                //float theta = Mathf.Asin(x.magnitude);
+                //Debug.Log(theta);
+                //Vector3 w = x.normalized * theta / Time.fixedDeltaTime;
 
-                Quaternion q = transform.rotation * rigidbody.inertiaTensorRotation;
-                Vector3 T = q * Vector3.Scale(rigidbody.inertiaTensor, (Quaternion.Inverse(q) * w));
-                rigidbody.AddTorque(T, ForceMode.Impulse);
+                //Quaternion q = transform.rotation * rigidbody.inertiaTensorRotation;
+                //Vector3 T = q * Vector3.Scale(rigidbody.inertiaTensor, (Quaternion.Inverse(q) * w));
+                //rigidbody.AddTorque(T, ForceMode.Impulse);
 
-                //transform.rotation = Quaternion.FromToRotation(StartDirection, Target.position - transform.position) * StartRotation;
+                transform.rotation = Quaternion.FromToRotation(StartDirection, Target.position - transform.position) * StartRotation;
             //}
         }
         /*

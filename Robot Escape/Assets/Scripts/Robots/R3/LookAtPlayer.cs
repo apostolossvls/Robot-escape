@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -6,6 +6,7 @@ using UnityEngine.Animations;
 public class LookAtPlayer : MonoBehaviour
 {
     public bool activated = true;
+    public Robot3Brain brain;
     public Transform faceController;
     public Transform target;
     public Transform[] defaultTargets;
@@ -51,11 +52,20 @@ public class LookAtPlayer : MonoBehaviour
 
     void CheckTriggerTransform(Transform trigger){
         if (trigger.gameObject.activeInHierarchy){
+
             float importance = 0;
             switch (trigger.tag)
             {
                 case "Player":
                     importance = 1;
+                    break;
+                case "Grabbable":
+                    GrabbedBy g = trigger.GetComponent<GrabbedBy>();
+                    if (g != null){
+                        if (g.holder == brain.transform) importance = 0;
+                        else importance = 0.5f;
+                    }
+                    else importance = 0.5f;
                     break;
                 default:
                     return;
