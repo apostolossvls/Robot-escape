@@ -76,10 +76,10 @@ public class PlayerMovement : MonoBehaviour
             //    }
             //}
 
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, targetDirection, out hit, 1.1f, layerMask)){
-                return;
-            }
+            //RaycastHit hit;
+            //if (Physics.Raycast(transform.position, targetDirection, out hit, 1.1f, layerMask)){
+            //    return;
+            //}
             //Debug
 
             // Calculate how fast we should be moving
