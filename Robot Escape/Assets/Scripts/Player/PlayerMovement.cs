@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform cam;
     public Transform head;
     public Transform feet;
-    public Collider collider;
+    //public Collider col;
     public LayerMask layerMask;
     //public Animator animator;
     Vector3 movement;
@@ -31,14 +31,22 @@ public class PlayerMovement : MonoBehaviour
         movement.z = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
 
+        /*
         if (rig.velocity != Vector3.zero){
             Vector3 dir = rig.velocity;
             dir.y = 0;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSpeed * dir.magnitude);
         }
+        */
     }
 
     void FixedUpdate(){
+        //get movement direction
+        if (rig.velocity != Vector3.zero){
+            Vector3 dir = rig.velocity;
+            dir.y = 0;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotationSpeed * dir.magnitude);
+        }
         //position
         if (movement != Vector3.zero && canMove)
         {

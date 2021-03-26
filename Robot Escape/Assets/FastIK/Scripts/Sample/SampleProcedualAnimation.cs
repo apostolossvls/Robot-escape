@@ -11,6 +11,16 @@ namespace DitzelGames.FastIK
         public Transform Step;
         public Transform Attraction;
 
+        //added
+        void Start(){
+            FootTarget = new Transform[0];
+            LookTarget = transform;
+            HandTarget = transform;
+            HandPole = transform;
+            Step = transform;
+            Attraction = transform;
+        }
+
         public void LateUpdate()
         {
             //move step & attraction

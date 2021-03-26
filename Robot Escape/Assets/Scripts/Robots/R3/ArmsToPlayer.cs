@@ -19,11 +19,11 @@ public class ArmsToPlayer : MonoBehaviour
     Quaternion handLeftDefaultRotation, handRightDefaultRotation;
     float armLenght;
     Vector3 leftTargetPointStart, rightTargetPointStart;
-    Handle leftHandle, rightHandle;
+    //Handle leftHandle, rightHandle;
 
     void Start(){
-        leftHandle = null;
-        rightHandle = null;
+        //leftHandle = null;
+        //rightHandle = null;
         armLenght = Vector3.Distance(armLeft.position, leftTargetPoint.position);
         if (leftTargetPoint) leftTargetPointStart = leftTargetPoint.localPosition;
         if (rightTargetPoint) rightTargetPointStart = rightTargetPoint.localPosition;

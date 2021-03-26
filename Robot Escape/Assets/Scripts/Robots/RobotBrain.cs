@@ -16,9 +16,10 @@ public class RobotBrain : MonoBehaviour
     public bool moving;
     public Vector3 movingTargetPosition;
     public float movingSpeed = 1f;
-    float maxVelocityChange = 10f;
+    //float maxVelocityChange = 10f;
     public bool moveRandomly;
     public float moveRandomlyTime = 10f;
+    Vector3 lastFacing;
     float moveRandomlyTimer;
     [Header("Animation")]
     public Animator animator;
@@ -26,6 +27,7 @@ public class RobotBrain : MonoBehaviour
     {
         moving = false;
         moveRandomlyTimer = 0;
+        lastFacing = transform.forward;
 
         Collider[] col = transform.GetChild(0).GetComponentsInChildren<Collider>() as Collider[];
         for (int i = 1; i < col.Length; i++)
@@ -116,5 +118,24 @@ public class RobotBrain : MonoBehaviour
     void AnimationUpdateControl(){
         if (animator == null) return;
         animator.SetBool("Forward", moving || movingForced);
+        float fspeed = Mathf.InverseLerp(0, 1.5f, agent.velocity.magnitude);
+        fspeed = Mathf.Round(fspeed * 10f) / 5f;
+        fspeed = Mathf.Clamp01(fspeed);
+        
+        //animator.SetFloat("ForwardSpeed", fspeed);
+        animator.SetFloat("ForwardSpeed", fspeed);
+
+        Vector3 currentFacing = transform.forward;
+        float currentAngularVelocity = Vector3.SignedAngle(transform.forward, lastFacing, transform.up) / Time.deltaTime; //degrees per second
+        lastFacing = currentFacing;
+        float aspeed = Mathf.Sign(currentAngularVelocity) * Mathf.InverseLerp(0, 60f, Mathf.Abs(currentAngularVelocity));
+        aspeed = Mathf.Round(aspeed * 10f) / 10f;
+
+        animator.SetFloat("AngularSpeed", aspeed);
+        //Debug.Log("agent.velocity.magnitude: "+ agent.velocity.magnitude.ToString());
+        Debug.Log("fspeed: "+ fspeed.ToString());
+        Debug.Log("aspeed: "+ aspeed.ToString());
+        //Debug.Log("currentAngularVelocity: "+ currentAngularVelocity.ToString());
+        Debug.DrawRay(transform.position, transform.forward * currentAngularVelocity, Color.black, 1f);
     }
 }
