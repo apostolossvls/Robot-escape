@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             //}
 
             //RaycastHit hit;
-            //if (Physics.Raycast(transform.position, targetDirection, out hit, 1.1f, layerMask)){
+            //if (Physics.Raycast(transform.position, targetDirection, out hit, targetDirection.magnitude+0.05f, layerMask)){
             //    return;
             //}
             //Debug

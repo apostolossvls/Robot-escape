@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592306306424337648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CenterVent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7921345261149317682}
   - component: {fileID: 479779627571539718}
   - component: {fileID: 6954471978806579123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CenterVentBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 5188620232326535641}
   - component: {fileID: 7629236310774466043}
   - component: {fileID: 1623939429413487575}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7887278615317971657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pillars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 5786827188645856823}
   - component: {fileID: 6690367062672243717}
   - component: {fileID: 6656619828321475442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1262,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7607193315603844820}
   - component: {fileID: 7607193315603844821}
-  m_Layer: 0
+  - component: {fileID: 6643601253886496949}
+  m_Layer: 9
   m_Name: Other
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,8 +1295,22 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.1, z: 10}
+  m_Size: {x: 10, y: 0.1, z: 10}
   m_Center: {x: 0, y: -0.05, z: 0}
+--- !u!136 &6643601253886496949
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607193315603844779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 10
+  m_Direction: 0
+  m_Center: {x: 0, y: -0.05, z: 5}
 --- !u!1 &7607193316336299579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1326,7 @@ GameObject:
   - component: {fileID: 7607193316336299559}
   - component: {fileID: 7607193316336299558}
   - component: {fileID: 7607193316336299557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1419,7 +1434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7607193316556240224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,7 +1470,7 @@ GameObject:
   - component: {fileID: 7607193316658938032}
   - component: {fileID: 7607193316658938039}
   - component: {fileID: 7607193316658938038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +2003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7607193316907888492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hallway1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2024,7 +2039,7 @@ GameObject:
   - component: {fileID: 7607193317317429818}
   - component: {fileID: 7607193317317429796}
   - component: {fileID: 7607193317317429819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CenterVentTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2107,7 +2122,7 @@ GameObject:
   - component: {fileID: 466136554354057290}
   - component: {fileID: 8406561612436624796}
   - component: {fileID: 7305833201963564800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
