@@ -26,6 +26,12 @@ MonoBehaviour:
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
+  tint:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
   maxFogDistance:
     m_OverrideState: 0
     m_Value: 5000
@@ -116,7 +122,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   skyType:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 4
   skyAmbientMode:
     m_OverrideState: 0
     m_Value: 0
@@ -136,7 +142,7 @@ MonoBehaviour:
   m_Name: HDRISky
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
+  m_AdvancedMode: 1
   rotation:
     m_OverrideState: 0
     m_Value: 0
@@ -154,11 +160,11 @@ MonoBehaviour:
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
-    m_Value: 0.46607146
+    m_Value: 0.46607345
     min: 0
   upperHemisphereLuxColor:
     m_OverrideState: 0
-    m_Value: {x: 0.18750611, y: 0.29181966, z: 0.5}
+    m_Value: {x: 0.18750395, y: 0.2918189, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
