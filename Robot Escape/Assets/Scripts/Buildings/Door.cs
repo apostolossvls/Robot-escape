@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    protected bool IsOpen = false;
+    protected bool isOpen = false;
 
     public bool GetIsOpen(){
-        return IsOpen;
+        return isOpen;
     }
 }

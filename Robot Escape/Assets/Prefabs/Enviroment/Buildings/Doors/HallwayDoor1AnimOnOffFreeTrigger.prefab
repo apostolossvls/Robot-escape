@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &798932937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081803141523317722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 6, z: 10}
+  m_Center: {x: 0, y: 3, z: 0}
+--- !u!114 &216263627658739503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081803141523317722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7d8182d3cfed64186b8e68134077f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 429219671652164476}
+  openAudioSouce: {fileID: 9061290220890165458}
+  closeAudioSouce: {fileID: 2899290232429596848}
+  animatorStringIsOpen: IsOpen
+  targets:
+  - Player
+--- !u!1001 &1981537310865432910
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7734792226102424204, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226102424207, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226102424207, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_VersionIndex
+      value: 3408
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226102424211, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226431688470, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226431688470, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_VersionIndex
+      value: 3411
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226431688474, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792226431688475, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091220, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_Name
+      value: HallwayDoor1AnimOnOffFreeTrigger Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734792227313091221, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2904163854380542597, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+--- !u!1 &8081803141523317722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7734792227313091220, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+  m_PrefabInstance: {fileID: 1981537310865432910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &429219671652164476 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2200906357794587186, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+  m_PrefabInstance: {fileID: 1981537310865432910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &9061290220890165458 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7403916541683577244, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+  m_PrefabInstance: {fileID: 1981537310865432910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2899290232429596848 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3693950830402662910, guid: 36b376547f56f8f4ca85c9919b5fec32, type: 3}
+  m_PrefabInstance: {fileID: 1981537310865432910}
+  m_PrefabAsset: {fileID: 0}
